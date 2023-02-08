@@ -52,6 +52,10 @@ Ngrx is the Angular version of React's Redux. NgRx stores the application state 
 
 **Effects:** Used to perform some side effects on store updating actions. Like calling a backend to save the data, or updating the data in browser's localStorage.
 
+**Meta-reducers:** are functions that are called before actual reducers. Can be used for use case of logging, and can be disabled for production.
+
+**NgRx Data:** The above way of implementing Ngrx requires lot of coding for actions, reducers, selectors etc. NgRx Data removes the need of such boilerplate code. You can compare it with Spring data JPA. Just like JPA encapsulates interactions with DB and provides CRUD functions to interact with DB, NgRx Data provides functions to interact with the NgRx store. Additionally, it also provides functions to directly make HTTP call to backend. For this, backend api and port has be configured in a way that Ngrx data expects, or other option is to configure custom route prefix path with NgRx data. 
+
 ### Things to note in this POC code base
 
 1. App.modue.ts eagerly loads only the auth module. All other modules are loaded lazily, ie only logged in user should get other routes available.
@@ -108,4 +112,11 @@ https://github.com/ramit21/ngrx/blob/813fd92f243543546f31c619ae6d28cad703ac40/sr
 
 https://github.com/ramit21/ngrx/blob/813fd92f243543546f31c619ae6d28cad703ac40/src/app/auth/auth.guard.ts#L24
 
-5. 
+5. We can enforce immutability of state and Actions, so that no reducer or effect can modify them:
+
+https://github.com/ramit21/ngrx/blob/545327c2bb2b1661d4983982b2299779c0c4d998/src/app/app.module.ts#L59
+
+6. NgRx Data: Look at branch <> for code using NgRx Data.
+
+
+
