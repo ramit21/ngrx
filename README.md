@@ -42,7 +42,7 @@ Why use state management solutions? Ans: If you keep data in data members of com
 
 Ngrx is the Angular version of React's Redux. NgRx stores the application state in an RxJS observable inside an Angular service called Store. At the same time, this service implements the Observable interface.
 
-## Ngrx components:
+## Ngrx components and features:
 
 **Actions:** Action is an event that you dispatch to update the data in the state. Every action that you dispatch has an Action-type and a payload (payload is optional).
 
@@ -116,7 +116,7 @@ https://github.com/ramit21/ngrx/blob/813fd92f243543546f31c619ae6d28cad703ac40/sr
 
 https://github.com/ramit21/ngrx/blob/545327c2bb2b1661d4983982b2299779c0c4d998/src/app/app.module.ts#L59
 
-6. NgRx Data: Look at branch <> for code using NgRx Data.
+6. first() operator is used to close the observable the first time a value is emitted:
 
-
+https://github.com/ramit21/ngrx/blob/b6341386fa508f49e485a8d6b9239fd7273c5d04/src/app/courses/courses.resolver.ts#L33
 
