@@ -36,7 +36,7 @@ Install Redux DevTools browser extension for your respective browser, to visuali
 
 ## Concepts
 
-As a pre-requisite to using ngrx, go yhrough the rxjs repo, as ngrx sate is based on reactive programming.
+As a pre-requisite to using ngrx, go through the rxjs repo, as ngrx sate is based on reactive programming.
 
 Why use state management solutions? Ans: If you keep data in data members of components, then the lifecycle of the data is tied to the lifecycle of the component. ie. if you move away from component to a different screen, the component gets destroyed, and when you come back, it gets recreated, and hence you again have to fetch data from the backend to store the data in it's members.
 
@@ -46,7 +46,7 @@ Ngrx is the Angular version of React's Redux. NgRx stores the application state 
 
 **Actions:** Action is an event that you dispatch to update the data in the state. Every action that you dispatch has an Action-type and a payload (payload is optional).
 
-**Reducers:** Reducer is a function that acts on Action events to update the state. A reducer is named a reducer, as it is based on reduce functional programming: ita takes original state, and action as 2 parameters, and returns a new updated state. Reducer function should return a new state instead of modifying existing, else time travelling debugger would not work. 
+**Reducers:** Reducer is a function that acts on Action events to update the state. A reducer is named a reducer, as it is based on reduce functional programming: it takes original state, and action as 2 parameters, and returns a new updated state. Reducer function should return a new state instead of modifying existing, else time travelling debugger would not work. 
 
 **Selectors:** Ngrx store is basically an observable, which you can subscribe throughout your application and listen to state changes. So you can do store.pipe(map(state=> ...) as you do with Rxjs observables. The Selectors make querying of data from the store more efficient, by listening to the store only when the data has changes, ie removing the duplicates values, and preventing them from reaching the frontend each time. Select also do the Rxjs work of map() method.  
 
